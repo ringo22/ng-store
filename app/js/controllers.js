@@ -4,6 +4,7 @@
 var storeApp = angular.module('storeApp', []);
 
 storeApp.controller('GetBanners', function($scope) {
+	$scope.name = "banners";
 	$scope.banners = [
 		{
 			'image': 'http://img.prml.com.mx/ocreativas_banners/promocional_snap_n_grip.jpg',
@@ -22,4 +23,5 @@ storeApp.controller('GetBanners', function($scope) {
 			'link': 'detail/detail.cfm?articleId=COOK-02'
 		}
 	];
+
 });

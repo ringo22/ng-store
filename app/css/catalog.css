@@ -1,0 +1,14 @@
+.catalog-filters-comtent {
+	border: 1px solid #DDD;
+	padding: 10px;
+}
+
+.catalog-article {
+	height: 420px;
+	padding: 10px;
+}
+
+.catalog-article a img {
+	width: 100%;	
+}
+

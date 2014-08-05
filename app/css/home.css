@@ -1,0 +1,18 @@
+.home-slide-promotions {
+	overflow: auto;	
+}
+
+.home-slide-promotions {
+	overflow: hidden;
+}
+
+.home-slide-promotions ul {}
+
+.home-slide-promotions ul li {
+	list-style: none;
+	display: table-cell;
+}
+
+.home-articles-title {
+	padding: 10px;
+}
