@@ -1,0 +1,32 @@
+<!-- Filters -->
+<div class="row">
+  <div class="col-md-12 text-center catalog-filters-comtent">
+    Filtro: 
+    <select ng-model="orders">
+      <option value="">Seleccionar</option>
+      <option value="description">A-Z</option>
+      <option value="description;reverse=true">Z-A</option>
+      <option value="price">Mayor a Menor</option>
+      <option value="price;reverse=true">Menor a Mayor</option>
+    </select>
+  </div>
+</div>
+<br />
+<!-- Articles -->
+<div class="row">
+  <div class="col-md-4" ng-repeat="article in articles | filter:query | orderBy:orders">
+    <div class="catalog-article">
+      <a href="../article/{{ article.sku }}">
+        <img ng-src="{{ article.image }}">
+      </a>
+      <br /><br />
+      <p class="text-12">
+        SKU: {{ article.sku }}
+        <br />
+        <span class="text-10">Calificasion: {{ article.score}}</span>
+      </p>
+      <p class="text-12">{{ article.description }}</p>
+      <p class="text-16">$ {{ article.price }}</p>
+    </div>
+  </div>
+</div>
