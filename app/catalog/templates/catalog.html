@@ -15,7 +15,7 @@
 <!-- Articles -->
 <div class="row">
   <div class="col-md-4" ng-repeat="article in articles | filter:query | orderBy:orders">
-    <div class="catalog-article">
+    <div class="catalog-article" ng-mouseover="ngclass = 'ng-show'" ng-mouseleave="ngclass = ''">
       <a href="../article/{{ article.sku }}">
         <img ng-src="{{ article.image }}">
       </a>
@@ -27,6 +27,9 @@
       </p>
       <p class="text-12">{{ article.description }}</p>
       <p class="text-16">$ {{ article.price }}</p>
+      <div class="text-center ng-hide {{ ngclass }}">
+        <button class="btn btn-danger">Comprar</button>
+      </div>
     </div>
   </div>
 </div>

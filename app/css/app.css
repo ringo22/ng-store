@@ -19,6 +19,14 @@
 	width: 100%;
 }
 
+.ng-show {
+	display: block!important;
+}
+
+.ng-hide {
+	display: none;
+}
+
 /* Backgrounds */
 
 .bg-gray {
