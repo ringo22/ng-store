@@ -1,7 +1,9 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-12">
-      <img src="http://placehold.it/1140x400/333333/ffffff/&amp;text=[Banners] Principal" style="width:100%">
+    <div class="col-md-12" ng-repeat="banner in banners_H">
+      <a href="{{ banner.reference }}">
+        <img ng-src="{{ banner.image }}">
+      </a>
     </div>
   </div>
   <br />
@@ -9,7 +11,7 @@
     <div class="col-md-12">
       <div class="home-slide-promotions">
         <ul>
-          <li ng-repeat="banner in banners">
+          <li ng-repeat="banner in banners_P">
             <a href="{{ banner.link }}"><img ng-src="{{ banner.image }}"></a>
           </li>
         </ul>
@@ -30,7 +32,15 @@
   <br />
   <div class="row">
     <div class="col-md-12">
-      <img src="http://placehold.it/1140x180/333333/ffffff/&amp;text=[Banners] Micrositios" style="width:100%">
+      <div class="home-slide-promotions">
+        <ul>
+          <li ng-repeat="banner in banners_R">
+            <a href="{{ banner.reference }}">
+              <img ng-src="{{ banner.image }}">
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
