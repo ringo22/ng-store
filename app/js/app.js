@@ -3,7 +3,8 @@
 /* App Module */
 var storeApp = angular.module('storeApp', [
   'ngRoute',
-  'storeControllers'
+  'storeControllers',
+  'storeServices'
 ]);
 
 storeApp.config(['$routeProvider', function($routeProvider) {

@@ -3,10 +3,6 @@
 /* Controllers */
 var storeControllers = angular.module('storeControllers', []);
 
-storeControllers.controller('GetBanners', ['$scope', '$http', function($scope, $http) {
-	$scope.name = "banners";
-
-	$http.get('banners/promos.json').success(function(data) {
-    $scope.banners = data;
-  });
+storeControllers.controller('GetBanners', ['$scope', 'Banner', function($scope, Banner) {
+	$scope.banners = Banner.query();
 }]);
